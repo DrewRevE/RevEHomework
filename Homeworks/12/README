@@ -1,0 +1,74 @@
+I worked on this lab alone
+
+First puzzle:
+
+It simply compares my input with the string "Go ahead, make my day."
+
+Second puzzle:
+
+It takes in 6 numbers into an array and checks if they follow this pattern:
+[a b c d e f]
+a*-4=b
+b*-3=c
+c*-2=d
+d*-1=e
+e*0=f
+
+You can simply plug this into wolfram alpha and get each of them in terms of a
+Then it is simple as choosing a, which I chose as 1 to get the following:
+
+1 -4 12 -24 24 0
+
+Third puzzle:
+
+It simply reads in a number and a character and then uses a switch statement to decide
+what a variable will be. Then it computes a bitwise or of the var with 0xfffffb4b and checks
+if it becomes 0xffffffff.
+
+The var must then be 0x4b4 which means the character needs to be 'm' because its case 0x6a
+
+Another variable is checked before that you input. It just makes sure its below 0x516 so I
+chose 400
+
+Thus,
+
+400 m
+
+Fourth puzzle:
+
+It is simply looking for a number in which the following is true,
+
+(a-2)+(a-1)=3 && and where a is not < 2
+
+thus,
+
+3
+
+Fifth puzzle:
+
+Input has to be 9 char long
+
+This 9 character string is converted from ascii to numbers and anded with 0xf
+
+You can pick and choose positions in the array from a predefined string and input
+them as a string which it will then use.
+
+Sixth puzzle:
+
+This one has a constant that is always created the same with a loop. Thus there is no need
+to spend time in ghidra understanding this one. I can simply mark the line where the cmp
+instruction is used and find out what it ends up being.
+
+It ends up being 0x98
+
+This uses the strtoull function and you must only determine how to create 0x98 with a string
+input into this function
+
+Seventh puzzle:
+
+this one takes in operations that it should do on a number and does them with a goal of
+0xfffffffb
+The available operations are a multby2, donothing, or with 1, or bitwise not [0,1,2,3]
+thus the input will be
+2 0 0 3 1 1 1 1 (since it is a size 8 array)
+
